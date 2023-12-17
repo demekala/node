@@ -1,20 +1,25 @@
-const http = require('http');
-const fs = require('fs');
+// Imports
+const express = require('express');
+const app = express();
+const port = 3000;
 
-const PORT=8080; 
-fs.readFile('./views/index.html', function (err, html) {
+// Set up static file serving
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/img', express.static(__dirname + '/public/images'));
 
-    if (err) throw err;    
+// Set Views
+app.set('views', './views');
+app.set('view engine', 'ejs');
 
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(PORT);
+// Define a route for the root URL
+app.get('/', (req, res) => {
+    res.render('index');
 });
 
-console.log("lonk: localhost:" + PORT);
+// Navigation
+app.get('/index', (req, res) => {
+    res.render('index');
+});
 
-module.exports = {
-    
-}
+app.listen(port, () => console.info(`App listening on port ${port}`));
