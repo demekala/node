@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Log In</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="http://localhost:3000/" class="backButton"
+        ><button>Back</button></a
+      >
+      <div class="buttons">
+        <button onclick="logInStudent()" id="studentButton">Student</button>
+        <button onclick="logInTeacher()" id="teacherButton">Teacher</button>
+        <button onclick="logInGroup()" id="groupButton">Group</button>
+      </div>
+      <div class="row" id="identityNumber">
+        <p id="identityGroupNumber">identity number</p>
+        <input type="number" name="identity number" id="number" />
+      </div>
+      <div class="row" id="password">
+        <p>password</p>
+        <input type="password" name="password" id="passwordInput" />
+      </div>
+      <div class="reserSubmit" id="reserSubmit">
+        <button type="reset">Reset</button>
+        <button type="submit" id="logIn" onclick="logIn()">Log In</button>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>

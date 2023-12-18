@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/signup.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="http://localhost:3000/" class="backButton"
+        ><button>Back</button></a
+      >
+      <div class="buttons">
+        <button onclick="signUpStudent()" id="studentButton">Student</button>
+        <button onclick="signUpTeacher()" id="teacherButton">Teacher</button>
+        <button onclick="signUpGroup()" id="groupButton">Group</button>
+      </div>
+      <div class="inputTypes">
+        <div class="row" id="groupName">
+          <p>group name</p>
+          <input type="text" name="Group name" />
+        </div>
+        <div class="row" id="groupNumber">
+          <p>group number</p>
+          <input type="number" name="Group number" />
+        </div>
+        <div class="row" id="firstName">
+          <p>first name</p>
+          <input type="text" name="First name" />
+        </div>
+        <div class="row" id="lastName">
+          <p>last name</p>
+          <input type="text" name="Last name" />
+        </div>
+        <div class="row" id="identityNumber">
+          <p>identity number</p>
+          <input type="number" name="identity number" />
+        </div>
+        <div class="row" id="birthDate">
+          <p>birth date</p>
+          <input type="date" name="birth date" />
+        </div>
+        <div class="row" id="email">
+          <p>email</p>
+          <input type="email" name="gmail" />
+        </div>
+        <div class="row" id="password">
+          <p>password</p>
+          <input type="password" name="password" />
+        </div>
+        <div class="row" id="confirmPassword">
+          <p>confirm password</p>
+          <input type="password" name="password" />
+        </div>
+      </div>
+      <div class="resetSubmit" id="resetSubmitButtos">
+        <button type="reset">Reset</button>
+        <button type="submit" id="submitButton">Submit</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
