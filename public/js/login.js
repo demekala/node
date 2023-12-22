@@ -62,20 +62,20 @@ function logInGroup() {
   user = types.group;
 }
 
+// Add an event listener to the form
+document.getElementById("signupForm").addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the values of username and password
+  const username = document.getElementById("identityNumber").value;
+  const password = document.getElementById("password").value;
+
+  // Call your function or perform any desired action
+  console.log("Username:", username);
+  console.log("Password:", password);
+
+  // You can perform additional actions, like making an AJAX request to the server
+  // or any other client-side logic here
+});
+
 start();
-
-import { getEmp } from "./../../sql";
-
-async function logIn() {
-  const number = document.getElementById("number").value;
-  const password = document.getElementById("passwordInput").value;
-
-  try {
-    if (user == types.student) {
-      const result = await getEmp("select * from students");
-      console.log("Query Result:", result);
-    }
-  } catch (error) {
-    console.error("Error executing SQL query:", error);
-  }
-}

@@ -1,0 +1,76 @@
+<!-- views/database.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+  </head>
+  <body>
+    <div id="students" data-student="<%= JSON.stringify(studentsData) %>">
+      <!-- No need for individual properties here -->
+    </div>
+    <div id="teachers" data-teacher="<%= JSON.stringify(teachersData) %>"></div>
+    <div id="groups" data-group="<%= JSON.stringify(groupsData) %>"></div>
+    <script>
+      const studentsContainer = document.querySelector("#students");
+      const teachersContainer = document.querySelector("#teachers");
+      const groupsContainer = document.querySelector("#groups");
+
+      const studentsData = JSON.parse(studentsContainer.dataset.student);
+      const teachersData = JSON.parse(teachersContainer.dataset.teacher);
+      const groupsData = JSON.parse(groupsContainer.dataset.group);
+
+      for (let i = 0; i < studentsData.length; i++) {
+        const newDiv = document.createElement("div");
+        newDiv.innerText = `student ${i + 1} \n
+                            id: ${studentsData[i].StudentID} \n
+                            name: ${studentsData[i].FirstName} \n
+                            surname: ${studentsData[i].LastName} \n
+                            identity number: ${
+                              studentsData[i].IdentityNumber
+                            } \n
+                            birth date: ${studentsData[i].BirthDate} \n
+                            email: ${studentsData[i].Email} \n
+                            password: ${studentsData[i].Pass}`;
+
+        newDiv.style.border = "1px solid black";
+        newDiv.style.margin = "5px";
+
+        studentsContainer.appendChild(newDiv);
+      }
+      for (let i = 0; i < teachersData.length; i++) {
+        const newDiv = document.createElement("div");
+        newDiv.innerText = `teacher ${i + 1} \n
+                            id: ${teachersData[i].TeacherID} \n
+                            name: ${teachersData[i].FirstName} \n
+                            surname: ${teachersData[i].LastName} \n
+                            identity number: ${
+                              teachersData[i].IdentityNumber
+                            } \n
+                            birth date: ${teachersData[i].BirthDate} \n
+                            email: ${teachersData[i].Email} \n
+                            password: ${teachersData[i].Pass}`;
+
+        newDiv.style.border = "1px solid black";
+        newDiv.style.margin = "5px";
+
+        teachersContainer.appendChild(newDiv);
+      }
+      for (let i = 0; i < groupsData.length; i++) {
+        const newDiv = document.createElement("div");
+        newDiv.innerText = `group ${i + 1} \n
+                            GroupID: ${groupsData[i].GroupID} \n
+                            GroupName: ${groupsData[i].GroupName} \n
+                            GroupNumber: ${groupsData[i].GroupNumber} \n
+                            Pass: ${groupsData[i].Pass} \n`;
+
+        newDiv.style.border = "1px solid black";
+        newDiv.style.margin = "5px";
+
+        groupsContainer.appendChild(newDiv);
+      }
+    </script>
+  </body>
+</html>

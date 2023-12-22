@@ -11,12 +11,12 @@
       <a href="http://localhost:3000/" class="backButton"
         ><button>Back</button></a
       >
-      <div class="buttons">
+      <div class="buttons" action="/submitForm" method="post">
         <button onclick="signUpStudent()" id="studentButton">Student</button>
         <button onclick="signUpTeacher()" id="teacherButton">Teacher</button>
         <button onclick="signUpGroup()" id="groupButton">Group</button>
       </div>
-      <div class="inputTypes">
+      <form class="inputTypes">
         <div class="row" id="groupName">
           <p>group name</p>
           <input type="text" name="Group name" />
@@ -53,7 +53,7 @@
           <p>confirm password</p>
           <input type="password" name="password" />
         </div>
-      </div>
+      </form>
       <div class="resetSubmit" id="resetSubmitButtos">
         <button type="reset">Reset</button>
         <button type="submit" id="submitButton">Submit</button>

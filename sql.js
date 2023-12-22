@@ -12,7 +12,7 @@ var dbConfig = {
   },
 };
 
-function getEmp(text) {
+function getEmp(attribute, table, callback) {
   var conn = new sql.ConnectionPool(dbConfig);
   var req = new sql.Request(conn);
 
@@ -23,11 +23,12 @@ function getEmp(text) {
       return;
     }
 
-    req.query(text, function (err, recordset) {
+    req.query("SELECT " + attribute + " FROM " + table, function (err, result) {
       if (err) {
         console.log(err);
       } else {
-        console.log(recordset);
+        // Access the recordset property and iterate through its elements
+        callback(result.recordset);
       }
       conn.close();
     });
@@ -108,6 +109,10 @@ function addGroupToTable(GroupName, GroupNumber, Pass) {
     });
   });
 }
+
+getEmp("*", "groups", (result) => {
+  console.log(result[0]);
+});
 
 module.exports = {
   getEmp: getEmp,

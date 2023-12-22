@@ -1,6 +1,6 @@
-// imports
 const server = require("./server");
 const sql = require("./sql");
+const prompt = require("prompt-sync")();
 
 /* sql.addStudentTeacherToTable(
   "Teachers",
@@ -8,7 +8,7 @@ const sql = require("./sql");
   "Saginashvili",
   "0101010101",
   "1960-08-13",
-  "avtosag@gmail.com",
+  "avtosag@gmail.com",a
   "avto1960"
 ); */
 

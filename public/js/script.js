@@ -1,7 +1,5 @@
-const sql = require("./../../sql");
-
-const groupNameElement = document.getElementById("groupName");
 const groupNumberElement = document.getElementById("groupNumber");
+const groupNameElement = document.getElementById("groupName");
 const firstNameElement = document.getElementById("firstName");
 const lastNameElement = document.getElementById("lastName");
 const identityNumberElement = document.getElementById("identityNumber");

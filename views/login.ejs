@@ -16,18 +16,20 @@
         <button onclick="logInTeacher()" id="teacherButton">Teacher</button>
         <button onclick="logInGroup()" id="groupButton">Group</button>
       </div>
-      <div class="row" id="identityNumber">
-        <p id="identityGroupNumber">identity number</p>
-        <input type="number" name="identity number" id="number" />
-      </div>
-      <div class="row" id="password">
-        <p>password</p>
-        <input type="password" name="password" id="passwordInput" />
-      </div>
-      <div class="reserSubmit" id="reserSubmit">
-        <button type="reset">Reset</button>
-        <button type="submit" id="logIn" onclick="logIn()">Log In</button>
-      </div>
+      <form id="signupForm" action="/signup" method="post">
+        <div class="row" id="identityNumber">
+          <p id="identityGroupNumber">identity number</p>
+          <input type="number" name="identityNumber" id="number" />
+        </div>
+        <div class="row" id="password">
+          <p>password</p>
+          <input type="password" name="password" id="passwordInput" />
+        </div>
+        <div class="reserSubmit" id="reserSubmit">
+          <button type="reset">Reset</button>
+          <button type="submit" id="logIn">Log In</button>
+        </div>
+      </form>
     </div>
     <script src="js/login.js"></script>
   </body>
