@@ -12,7 +12,7 @@ var dbConfig = {
   },
 };
 
-function getEmp(attribute, table, callback) {
+function getEmp(sqlcode, callback) {
   var conn = new sql.ConnectionPool(dbConfig);
   var req = new sql.Request(conn);
 
@@ -23,7 +23,7 @@ function getEmp(attribute, table, callback) {
       return;
     }
 
-    req.query("SELECT " + attribute + " FROM " + table, function (err, result) {
+    req.query(sqlcode, (err, result) => {
       if (err) {
         console.log(err);
       } else {
@@ -109,10 +109,6 @@ function addGroupToTable(GroupName, GroupNumber, Pass) {
     });
   });
 }
-
-getEmp("*", "groups", (result) => {
-  console.log(result[0]);
-});
 
 module.exports = {
   getEmp: getEmp,

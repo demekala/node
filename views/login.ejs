@@ -7,30 +7,18 @@
     <title>Log In</title>
   </head>
   <body>
-    <div class="container">
-      <a href="http://localhost:3000/" class="backButton"
-        ><button>Back</button></a
-      >
-      <div class="buttons">
-        <button onclick="logInStudent()" id="studentButton">Student</button>
-        <button onclick="logInTeacher()" id="teacherButton">Teacher</button>
-        <button onclick="logInGroup()" id="groupButton">Group</button>
-      </div>
-      <form id="signupForm" action="/signup" method="post">
-        <div class="row" id="identityNumber">
-          <p id="identityGroupNumber">identity number</p>
-          <input type="number" name="identityNumber" id="number" />
-        </div>
-        <div class="row" id="password">
-          <p>password</p>
-          <input type="password" name="password" id="passwordInput" />
-        </div>
-        <div class="reserSubmit" id="reserSubmit">
-          <button type="reset">Reset</button>
-          <button type="submit" id="logIn">Log In</button>
-        </div>
-      </form>
-    </div>
+    <a
+      href="http://localhost:3000/"
+      style="position: absolute; top: 10px; left: 10px"
+      ><button>Back</button></a
+    >
+    <form action="/submitForm" method="post">
+      <label for="text">email / group name: </label>
+      <input type="text" name="email" />
+      <label for="password">password: </label>
+      <input type="password" name="password" />
+      <button type="submit">Submit</button>
+    </form>
     <script src="js/login.js"></script>
   </body>
 </html>

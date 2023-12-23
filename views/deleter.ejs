@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Entry</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input {
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #555;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background-color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      href="http://localhost:3000/"
+      style="position: absolute; top: 10px; left: 10px"
+      ><button>Back</button></a
+    >
+    <form action="/delete" method="post">
+      <label for="num">Identity Number / Group Number:</label>
+      <input type="number" name="num" placeholder="Enter a number" required />
+
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>

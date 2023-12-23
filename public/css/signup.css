@@ -1,59 +1,56 @@
-* {
-  padding: 0px;
-  margin: 0px;
-}
 body {
-  background-color: pink;
-  width: 100%;
-  height: 100%;
-}
-.container {
-  width: 100vw;
-  height: 100vh;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
-.buttons {
-  position: absolute;
-  top: 20px;
-  width: 340px;
-  display: flex;
-  flex-direction: row;
+
+h1 {
+  margin-top: 20px;
 }
-.buttons button {
-  width: 30%;
-  height: 100%;
+
+form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
 input {
-  width: 200px;
-  height: 30px;
-  margin: 10px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-.resetSubmit {
-  width: 340px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.resetSubmit button {
-  width: 45%;
-  height: 100%;
+
+button:hover {
+  background-color: #45a049;
 }
-.row {
-  display: flex;
-  width: 340px;
-  justify-content: space-between;
-  align-items: center;
-}
-.backButton {
-  position: absolute;
-  left: 2vw;
-  top: 1vh;
-}
-.backButton button {
-  width: 50px;
-  height: 30px;
-  font-size: medium;
+
+hr {
+  width: 100%;
+  margin-top: 20px;
+  border: 0.5px solid #ccc;
 }

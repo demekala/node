@@ -8,6 +8,20 @@
   </head>
   <body>
     <div class="container">
+      <h1
+        style="
+          position: absolute;
+          left: 35vw;
+          top: 40vh;
+          width: 700px;
+          font-size: 80px;
+          color: black;
+        "
+      >
+        Logged: <%=logged%> <br />
+        access: <%=access%>
+      </h1>
+
       <a href="http://localhost:3000/login"
         ><button id="login">Login</button></a
       >
@@ -16,6 +30,9 @@
       >
       <a href="http://localhost:3000/database"
         ><button id="signup">Database</button></a
+      >
+      <a href="http://localhost:3000/deleter"
+        ><button id="signup">Delete</button></a
       >
     </div>
   </body>

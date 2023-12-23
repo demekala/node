@@ -1,30 +1,43 @@
-* {
-  padding: 0px;
-  margin: 0px;
-}
 body {
-  background-color: pink;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
 }
+
 .container {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  position: relative;
 }
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  right: 45vw;
+  top: 20px;
+}
+
 a {
-  width: 20%;
-  height: 5%;
-  margin: 0.2%;
-  transition: 2s ease-out 100ms;
+  text-decoration: none;
+  color: #fff;
 }
+
 button {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  font-size: 25px;
-  font-weight: 800;
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #555;
+  color: #fff;
+  border-radius: 5px;
 }
-a:hover {
-  background-color: aqua;
+
+button:hover {
+  background-color: #777;
 }

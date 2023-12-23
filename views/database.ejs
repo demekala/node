@@ -6,8 +6,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Database</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      form {
+        display: flex;
+        margin: 10px 40vw;
+      }
+
+      label {
+        margin-right: 10px;
+      }
+
+      input {
+        padding: 5px;
+      }
+
+      button {
+        padding: 5px 10px;
+        cursor: pointer;
+        background-color: #555;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #777;
+      }
+
+      #students,
+      #teachers,
+      #groups {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .data-container {
+        flex-basis: calc(33.33% - 20px);
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
+    <a href="http://localhost:3000/"><button>Back</button></a>
+    <form action="/searchWithName" method="post">
+      <label for="name">name: </label>
+      <input type="text" name="name" />
+      <button type="submit">search</button>
+    </form>
+    <form action="/searchWithSurname" method="post">
+      <label for="surname">surname: </label>
+      <input type="text" name="surname" />
+      <button type="submit">search</button>
+    </form>
+    <form action="/searchWithIdentityNumber" method="post">
+      <label for="identityNumber">identity number: </label>
+      <input type="number" name="identityNumber" />
+      <button type="submit">search</button>
+    </form>
+    <form action="/searchWithBirthDate" method="post">
+      <label for="birthDate">birth date: </label>
+      <input type="date" name="birthDate" />
+      <button type="submit">search</button>
+    </form>
+    <form action="/searchWithGroupName" method="post">
+      <label for="groupName">group name: </label>
+      <input type="text" name="groupName" />
+      <button type="submit">search</button>
+    </form>
+    <form action="/searchWithGroupNumber" method="post">
+      <label for="groupNumber">group number: </label>
+      <input type="number" name="groupNumber" />
+      <button type="submit">search</button>
+    </form>
+    <form action="/resetDatabase" method="post">
+      <button type="submit">Reset database</button>
+    </form>
+
     <div id="students" data-student="<%= JSON.stringify(studentsData) %>">
       <!-- No need for individual properties here -->
     </div>
